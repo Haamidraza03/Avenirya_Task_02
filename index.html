@@ -153,10 +153,10 @@
     <div class="row3">
         <div class="col-md-5" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out" style="margin-top: 25px;">
             <center><form>
-                <input type="text" class="form-control" style="font-size: 25px; margin-bottom: 15px; padding: 10px 15px; border-radius: 30px; width: 500px;" placeholder="Enter your Name" required> <br>
-                <input type="email" class="form-control" style="font-size: 25px; margin-bottom: 15px; padding: 10px 15px; border-radius: 30px; width: 500px;" placeholder="Your Email" required> <br>
-                <textarea class="form-control" rows="4" style="font-size: 25px; padding: 10px 15px; border-radius: 30px; width: 500px;" placeholder="Enter your Message or Feedback" required></textarea> <br>
-                <center><button type="submit" class="btn btn-primary" style="border-radius: 30px; padding: 10px 25px;">Submit</button></center>
+                <input type="text" class="form-control" id="name" style="font-size: 25px; margin-bottom: 15px; padding: 10px 15px; border-radius: 30px; width: 500px;" placeholder="Enter your Name"> <br>
+                <input type="email" class="form-control" style="font-size: 25px; margin-bottom: 15px; padding: 10px 15px; border-radius: 30px; width: 500px;" id="email" placeholder="Your Email"> <br>
+                <textarea class="form-control" id="query" rows="4" style="font-size: 25px; padding: 10px 15px; border-radius: 30px; width: 500px;" placeholder="Enter your Message or Feedback"></textarea> <br>
+                <center><button type="button" onclick="check()" class="btn btn-primary" style="border-radius: 30px; padding: 10px 25px;">Submit</button></center>
             </form></center>
                 <center><div class="row3" style="margin-top: 20px;">
                     <div class="bg-white" style="box-shadow: 3px 3px 3px 3px rgb(244, 241, 241); margin-bottom: 20px;" id="em"><a href="mailto:haamidraza03@gmail.com"><p id="con" class="text-danger" style="color: red;"><i class="fa-regular fa-envelope"></i> E-mail</p></a></div>
@@ -217,6 +217,26 @@
         });
     </script>    
     <script src="https://kit.fontawesome.com/1a05f327c3.js" crossorigin="anonymous"></script>
+    <script>
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Show or hide the button based on scroll position
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) { // Show the button after scrolling 200px
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+
+// Scroll to the top smoothly when the button is clicked
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+    </script>
     <script>
         var typed = new Typed(".auto-type", {
           strings: ["Haamid Raza Kazi"],
