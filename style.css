@@ -259,6 +259,11 @@ a:hover{
         padding: 10px !important;
     }
 
+    .em{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
     .img-fluid{
         width: 100%;
         height: auto;
